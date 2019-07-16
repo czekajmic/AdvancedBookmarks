@@ -20,5 +20,5 @@ p.nowa_klasa:hover
 .tabela_a > th,td
 {
   color: blue;
-  font-weight: cursive;
+  font-style: italic;
 }
