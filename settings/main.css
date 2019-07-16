@@ -3,8 +3,10 @@ body
   background-color: lightblue;
 }
 
-p.wstep
+p
 {
-  font-family = "Century Gothic";
-  letter-spacing = 20px;
+  font-family: "Century Gothic";
+  letter-spacing: 20px;
+  background-color: yellow;
+  color: blue;
 }
