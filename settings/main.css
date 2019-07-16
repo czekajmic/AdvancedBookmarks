@@ -10,12 +10,13 @@ p.nowa_klasa
   background-color: green;
   border-radius: 5px;
   color: red;
-  transition: letter-spacing 1.5s;
+  transition: letter-spacing 1.5s, color 0.75s;
 }
 
 p.nowa_klasa:hover
 {
   letter-spacing: 5px;
+  color: white;
 }
 
 .tabela_a th, .tabela_a td
@@ -24,13 +25,12 @@ p.nowa_klasa:hover
   font-style: italic;
   transform-origin: left center;
   transform: rotate(0deg);
-  transition: transform 0.5s, color 0.75s;
+  transition: transform 2s;
 }
 
 .tabela_a th:hover, .tabela_a td:hover
 {
   transform: rotate(720deg);
-  color: white;
 }
 
 .tabela_b th, .tabela_b td
