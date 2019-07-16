@@ -48,10 +48,12 @@ p.nowa_klasa:hover
 {
   from
   {
-    transform: transitionX 0px;
+    /*transform: transitionX -10px;*/
+    color: yellow;
   }
   to
   {
-    transform: transitionX 3000px;
+    /*transform: transitionX 3000px;*/
+    color: blue;
   }
 }
