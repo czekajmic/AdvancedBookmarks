@@ -1,6 +1,8 @@
+$tlo: red;
+
 body
 {
-  background-color: lightblue;
+  background-color: $tlo;
 }
 
 .wstep{
