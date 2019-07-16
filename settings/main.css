@@ -18,9 +18,9 @@ p.nowa_klasa:hover
   letter-spacing: 5px;
 }
 
-.tabela_a th,td
+.tabela_a (th,td)
 {
-  color: blue;
+  color: red;
   font-style: italic;
   transform: rotate(-25deg);
 }
