@@ -8,6 +8,7 @@ p.nowa_klasa
   font-family: "Century Gothic";
   letter-spacing: normal;
   background-color: green;
+  border-radius: 5px;
   color: red;
   transition: letter-spacing 0.5s;
 }
