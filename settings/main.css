@@ -51,6 +51,6 @@ p.nowa_klasa:hover
   to
   {
     transform: transitionX 3000px;
-    color: blue;
+    color: yellow;
   }
 }
