@@ -52,6 +52,6 @@ p.nowa_klasa:hover
   }
   to
   {
-    transform: transition 3000px;
+    transform: transitionX 3000px;
   }
 }
