@@ -1,5 +1,10 @@
 body
 {
+  background-color: white;
+  transition: background-color 0.1s;
+}
+body:hover
+{
   background-color: lightblue;
 }
 
