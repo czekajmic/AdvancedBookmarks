@@ -1,11 +1,6 @@
 body
 {
   background-color: white;
-  transition: background-color 0.1s;
-}
-body:hover
-{
-  background-color: lightblue;
 }
 
 p.nowa_klasa
@@ -20,4 +15,9 @@ p.nowa_klasa
 p.nowa_klasa:hover
 {
   letter-spacing: 5px;
+}
+
+.tabela_a > th,td
+{
+  color: blue;
 }
