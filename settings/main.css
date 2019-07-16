@@ -18,7 +18,7 @@ p.nowa_klasa:hover
   letter-spacing: 5px;
 }
 
-.tabela_a th td
+.tabela_a th
 {
   color: red;
   font-style: italic;
