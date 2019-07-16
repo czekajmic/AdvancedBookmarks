@@ -3,7 +3,7 @@ body
   background-color: lightblue;
 }
 
-p.wstep
+p .wstep
 {
   font-family: "Century Gothic";
   letter-spacing: 20px;
