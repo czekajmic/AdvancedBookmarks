@@ -22,6 +22,7 @@ p.nowa_klasa:hover
 {
   color: red;
   font-style: italic;
+  transform-origin: left center;
   transform: rotate(0deg);
   transition: transform 2s;
 }
