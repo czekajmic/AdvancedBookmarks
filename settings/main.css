@@ -24,12 +24,13 @@ p.nowa_klasa:hover
   font-style: italic;
   transform-origin: left center;
   transform: rotate(0deg);
-  transition: transform 2s;
+  transition: transform 0.5s, color 0.75s;
 }
 
 .tabela_a th:hover, .tabela_a td:hover
 {
   transform: rotate(720deg);
+  color: white;
 }
 
 .tabela_b th, .tabela_b td
