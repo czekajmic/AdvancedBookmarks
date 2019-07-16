@@ -6,7 +6,13 @@ body
 p.nowa_klasa
 {
   font-family: "Century Gothic";
-  letter-spacing: 20px;
+  letter-spacing: normal;
   background-color: green;
   color: red;
+  transition: letter-spacing 0.5s;
+}
+
+p.nowa_klasa:hover
+{
+  letter-spacing: 5px;
 }
