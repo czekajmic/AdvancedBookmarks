@@ -35,7 +35,7 @@ p.nowa_klasa:hover
 .tabela_b th, .tabela_b td
 {
   color: blue;
-  /*transform: transitionX 0px;*/
+  transform: translateX 0px;
   animation-name: wziuu;
   animation-duration: 2s;
   animation-iteration-count: 1;
@@ -50,7 +50,7 @@ p.nowa_klasa:hover
 {
   to
   {
-    /*transform: transitionX 3000px;*/
+    transform: translateX 3000px;*/
     color: yellow;
   }
 }
