@@ -22,5 +22,11 @@ p.nowa_klasa:hover
 {
   color: red;
   font-style: italic;
-  transform: rotate(-25deg);
+  transform: rotate(0deg) translateX(0px);
+  transition: transform 2s;
+}
+
+.tabela_a th:hover, .tabela_a td:hover
+{
+  transform: rotate(270deg) translateX(3000px);
 }
