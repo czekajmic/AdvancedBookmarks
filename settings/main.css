@@ -10,7 +10,7 @@ p.nowa_klasa
   background-color: green;
   border-radius: 5px;
   color: red;
-  transition: letter-spacing 0.5s;
+  transition: letter-spacing 1.5s;
 }
 
 p.nowa_klasa:hover
