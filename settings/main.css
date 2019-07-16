@@ -31,3 +31,27 @@ p.nowa_klasa:hover
 {
   transform: rotate(720deg);
 }
+
+.tabela_b th, .tabela_b td
+{
+  animation-name: wziuu;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-play-state; paused;
+}
+.tabela_b th:hover, .tabela_b td:hover
+{
+  animation-play-state: running;
+}
+@keyframes wziuu
+{
+  from
+  {
+    transform: transitionX 0px;
+  }
+  to
+  {
+    transform: transition 3000px;
+  }
+}
