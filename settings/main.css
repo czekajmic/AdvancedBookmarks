@@ -37,8 +37,8 @@ p.nowa_klasa:hover
   animation-name: wziuu;
   animation-duration: 2s;
   animation-iteration-count: 1;
-  animation-fill-mode: backwards;
-  animation-play-state; paused;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
 }
 .tabela_b th:hover, .tabela_b td:hover
 {
