@@ -109,24 +109,30 @@
           {
             if (i < biezacyobrazek)
             {
-              document.getElementById("logoobrazek" + i).classList.add("logo_wjazd");
-              document.getElementById("logoobrazek" + i).classList.remove("logo_wyjazd");
-              document.getElementById("logoobrazek" + i).classList.remove("logo_obecny"); 
+              document.getElementById("logoobrazek" + i).classList.add("logo-wjazd");
+              document.getElementById("logoobrazek" + i).classList.remove("logo-wyjazd");
+              document.getElementById("logoobrazek" + i).classList.remove("logo-obecny"); 
             } else if(i == biezacyobrazek)
             {
-              document.getElementById("logoobrazek" + i).classList.remove("logo_wjazd");
-              document.getElementById("logoobrazek" + i).classList.remove("logo_wyjazd");
-              document.getElementById("logoobrazek" + i).classList.add("logo_obecny"); 
+              document.getElementById("logoobrazek" + i).classList.remove("logo-wjazd");
+              document.getElementById("logoobrazek" + i).classList.remove("logo-wyjazd");
+              document.getElementById("logoobrazek" + i).classList.add("logo-obecny"); 
             } else if(i > biezacyobrazek)
             {
-              document.getElementById("logoobrazek" + i).classList.remove("logo_wjazd");
-              document.getElementById("logoobrazek" + i).classList.add("logo_wyjazd");
-              document.getElementById("logoobrazek" + i).classList.remove("logo_obecny"); 
+              document.getElementById("logoobrazek" + i).classList.remove("logo-wjazd");
+              document.getElementById("logoobrazek" + i).classList.add("logo-wyjazd");
+              document.getElementById("logoobrazek" + i).classList.remove("logo-obecny"); 
             }
           }
           
         }
       </script>
     </div>
+    <!-- Drugi panel z obrazkami -->
+    <div class="panels">
+      <div class="panel">
+        
+      </div>
+    </div> 
   </body>
 </html>
