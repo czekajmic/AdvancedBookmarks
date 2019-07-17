@@ -9,10 +9,6 @@
     <link rel="stylesheet" type="text/css" href="settings/main.css">
     <!-- link do pliku z funkcjami -->
     <script type="text/javascript" src="settings/main.js"></script>
-    <script>
-      var i;
-      const ileobrazkow = 3;
-    </script>
   </head>
   <body>
     <p class="nowa_klasa">
@@ -71,8 +67,15 @@
     <!-- Animowane logo -->
     <div class="logo-lista" id="logo1">
       <script type="text/javascript">
+        //lista obrazków
+        var listaobrazkow = [\
+          "https://gim.uw.edu/sites/gim.uw.edu/files/news_tiles/stock%20photo%20-%20doctor%20hands%20computer.jpg",\
+          "https://online.louisiana.edu/sites/online/files/styles/large/public/j-kelly-brito-256889-unsplash.jpg?itok=Eh-rh1Hd",\
+          "https://miro.medium.com/max/960/1*vXmp4X66hRDFR8YMyT8EWQ.jpeg"\
+          ];
         var nowyelement;
-        for (i = 1; i < ileobrazkow; i++)
+        var i;
+        for (i = 1; i <= listaobrazkow.length; i++)
         {
           //tworzymy Article
           nowyelement = document.createElement("article");
