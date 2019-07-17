@@ -9,6 +9,10 @@
     <link rel="stylesheet" type="text/css" href="settings/main.css">
     <!-- link do pliku z funkcjami -->
     <script type="text/javascript" src="settings/main.js"></script>
+    <script>
+      var i;
+      const ileobrazkow = 3;
+    </script>
   </head>
   <body>
     <p class="nowa_klasa">
@@ -63,5 +67,22 @@
         </tr>
       </table>
     </p>
+    
+    <!-- Animowane logo -->
+    <div class="logo-lista" id="logo1">
+      <script type="text/javascript">
+        var nowyelement;
+        for (i = 1; i < ileobrazkow; i++)
+        {
+          //tworzymy Article
+          nowyelement = document.createElement("article");
+          nowyelement.id = "logoobrazek" + i;
+          nowyelement.class = "element-listy";
+          nowyelement.innerHTML = i;
+          //przyłączamy Article do strony
+          document.getElementById("logo1").appendChild(nowyelement);
+        }
+      </script>
+    </div>
   </body>
 </html>
