@@ -70,3 +70,11 @@ p.nowa_klasa:hover
   transform: TranslateX(480px);
   opacity: 0;
 }
+
+.panels
+{
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items: center;
+}
