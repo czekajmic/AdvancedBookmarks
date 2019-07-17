@@ -1,4 +1,3 @@
-<!-- JavaScript -->
 /*****  ZMIANA TYTUŁU STRONY *****/
 //zapamiętaj oryginalny tytuł strony
 var pagetitle = document.title;
