@@ -12,7 +12,7 @@ function oknoAktywne()
 }
 function oknoNieaktywne()
 {
-  var tmp = Math.floor(Math.random()*3+1);
+  var tmp = Math.floor(Math.random()*3+1);  //losowanie 1-3
   switch(tmp)
   {
     case 1:
