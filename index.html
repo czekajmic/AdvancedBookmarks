@@ -105,7 +105,26 @@
           {
             biezacyobrazek = 1;
           }
-          document.title = biezacyobrazek;
+          for (i = 1; i <= listaobrazkow.length; i++)
+          {
+            if (i < biezacyobrazek)
+            {
+              document.getElementById("obrazekarticle" + i).classList.add("logo_wjazd");
+              document.getElementById("obrazekarticle" + i).classList.remove("logo_wyjazd");
+              document.getElementById("obrazekarticle" + i).classList.remove("logo_obecny"); 
+            } else if(i == biezacyobrazek)
+            {
+              document.getElementById("obrazekarticle" + i).classList.remove("logo_wjazd");
+              document.getElementById("obrazekarticle" + i).classList.remove("logo_wyjazd");
+              document.getElementById("obrazekarticle" + i).classList.add("logo_obecny"); 
+            } else if(i > biezacyobrazek)
+            {
+              document.getElementById("obrazekarticle" + i).classList.remove("logo_wjazd");
+              document.getElementById("obrazekarticle" + i).classList.add("logo_wyjazd");
+              document.getElementById("obrazekarticle" + i).classList.remove("logo_obecny"); 
+            }
+          }
+          
         }
       </script>
     </div>
