@@ -67,6 +67,8 @@
     <!-- Animowane logo -->
     <div class="logo-lista" id="logo1">
       <script type="text/javascript">
+        //bieżący obrazek w logo
+        var biezacyobrazek = 1;
         //lista obrazków
         var listaobrazkow = [
           "https://gim.uw.edu/sites/gim.uw.edu/files/news_tiles/stock%20photo%20-%20doctor%20hands%20computer.jpg",
@@ -90,6 +92,20 @@
           nowyelement.src = listaobrazkow[i-1];
           //przyłączamy obrazek do article
           document.getElementById("logoobrazek" + i).appendChild(nowyelement);
+        }
+        //przełączamy animacje
+        window.setInterval(zmienLogo,2000);
+        
+        function zmienLogo()
+        {
+          if (biezacyobrazek < listaobrazkow.length)
+          {
+            biezacyobrazek++;
+          } else
+          {
+            biezacyobrazek = 1;
+          }
+          document.title = biezacyobrazek;
         }
       </script>
     </div>
