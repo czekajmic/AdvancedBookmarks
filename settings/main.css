@@ -63,8 +63,10 @@ p.nowa_klasa:hover
 .logo-wjazd
 {
   transform: TranslateX(0px);
+  opacity: 1;
 }
 .logo-wyjazd
 {
   transform: TranslateX(480px);
+  opacity: 0;
 }
