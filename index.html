@@ -84,6 +84,13 @@
           nowyelement.innerHTML = i;
           //przyłączamy Article do strony
           document.getElementById("logo1").appendChild(nowyelement);
+          //tworzymy obrazek
+          nowyelement = document.createElement("img");
+          nowyelement.id = "obrazekarticle" + i;
+          nowyelement.class = "obrazek-element";
+          nowyelement.src = listaobrazkow[i-1];
+          //przyłączamy obrazek do article
+          document.getElementById("logoobrazek" + i).appendChild(nowyelement);
         }
       </script>
     </div>
