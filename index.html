@@ -68,7 +68,7 @@
     <script>
       var obecnyobrazekA = 0;
       var listaobrazkowA = [];
-      var czasA = 5000;
+      var czasA = 99000;
       
       //lista obrazków
       listaobrazkowA[0] = "https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_960_720.png";
@@ -93,5 +93,36 @@
       window.onload = zmianaSlajduA;
     </script>
     <img id="slajdA" style="max-width:600px; max-height:600px;">
+
+    <!-- Animowany slajd nr 2 -->
+    <div class="slajdB-powloka">
+      <div class="slajdB">
+        <img src="https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_960_720.png" id="lastClone">
+        <img src="https://cdn.pixabay.com/photo/2017/11/24/16/29/tea-2975184_960_720.png">
+        <img src="https://cdn.pixabay.com/photo/2019/05/01/09/50/swan-4170400_960_720.jpg">
+        <img src="https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_960_720.png" id="firstClone">
+      </div>
+    
+    </div>
+    <script>
+    	const slajdBpowloka = document.querySelector(".slajdB-powloka");
+      const slajdB = document.querySelectorAll(".slajdB img");
+      
+      let i = 1;
+      let czasb = 1000;
+      const rozmiar = slajdB[0].clientWidth;
+      
+      slajdBpowloka.style.transform = "translateX(" + (-rozmiar*i) + "px)";
+      
+      function zmianaSlajduB()
+      {
+      	slajdBpowloka.style.transition = "transform 0.5s ease-in-out";
+        i++;
+        slajdBpowloka.style.transform = "translateX(" + (-rozmiar*i) + "px)";
+        
+      }
+      
+      setTimeout("zmianaSlajduB()", czasB);
+    </script>
   </body>
 </html>
