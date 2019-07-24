@@ -78,7 +78,7 @@
       //zmiana slajdu
       function zmianaSlajdu()
       {
-        document.slajd.src = listaobrazkow[obecnyobrazek];
+        document.getElementById("slajd").src = listaobrazkow[obecnyobrazek];
         if(obecnyobrazek < listaobrazkow.length - 1)
         {
            obecnyobrazek++;
@@ -90,8 +90,8 @@
         setTimeout("zmianaSlajdu()", czas);
       }
       
-      window.onload = zmianaSlajdu;
+      window.onload = zmianaSlajdu();
     </script>
-    <img name="slajd" style="max-width:600px; max-height:400px;">
+    <img id="slajd" style="max-width:600px; max-height:400px;">
   </body>
 </html>
