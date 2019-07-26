@@ -1,5 +1,6 @@
 <html>
   <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <!-- tytuł strony wyświetlany na górze -->
     <title>
       No siema
@@ -65,64 +66,86 @@
     </p>
     
     <!-- Animowany slajd nr 1 -->
+	<img id="slajdA" class="slajdA">
     <script>
-      var obecnyobrazekA = 0;
-      var listaobrazkowA = [];
-      var czasA = 99000;
-      
-      //lista obrazków
-      listaobrazkowA[0] = "https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_960_720.png";
-      listaobrazkowA[1] = "https://cdn.pixabay.com/photo/2017/11/24/16/29/tea-2975184_960_720.png";
-      listaobrazkowA[2] = "https://cdn.pixabay.com/photo/2019/05/01/09/50/swan-4170400_960_720.jpg";
-      
-      //zmiana slajdu
-      function zmianaSlajduA()
-      {
-        document.getElementById("slajdA").src = listaobrazkowA[obecnyobrazekA];
-        if(obecnyobrazekA < listaobrazkowA.length - 1)
-        {
-           obecnyobrazekA++;
-        } else
-        {
-          obecnyobrazekA = 0;
-        }
-        
-        setTimeout("zmianaSlajduA()", czasA);
-      }
-      
-      window.onload = zmianaSlajduA;
+		var obecnyobrazekA = 0;
+		var listaobrazkowA = [];
+		var czasA = 5000;
+
+		//lista obrazków
+		listaobrazkowA[0] = "https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_960_720.png";
+		listaobrazkowA[1] = "https://cdn.pixabay.com/photo/2017/11/24/16/29/tea-2975184_960_720.png";
+		listaobrazkowA[2] = "https://cdn.pixabay.com/photo/2019/05/01/09/50/swan-4170400_960_720.jpg";
+
+		//zmiana slajdu
+		function zmianaSlajduA()
+		{
+		document.getElementById("slajdA").src = listaobrazkowA[obecnyobrazekA];
+		if(obecnyobrazekA < listaobrazkowA.length - 1)
+		{
+		   obecnyobrazekA++;
+		} else
+		{
+		  obecnyobrazekA = 0;
+		}
+
+
+		}
+		zmianaSlajduA();
+		timerA = setInterval(zmianaSlajduA, czasA);
     </script>
-    <img id="slajdA" style="max-width:600px; max-height:600px;">
 
     <!-- Animowany slajd nr 2 -->
     <div class="slajdB-powloka">
       <div class="slajdB">
-        <img src="https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_960_720.png" id="lastClone">
+        <img src="https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_960_720.png">
         <img src="https://cdn.pixabay.com/photo/2017/11/24/16/29/tea-2975184_960_720.png">
         <img src="https://cdn.pixabay.com/photo/2019/05/01/09/50/swan-4170400_960_720.jpg">
-        <img src="https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_960_720.png" id="firstClone">
+		<img src="http://digitalimagemakerworld.com/images/random-image/37656359-random-image.jpg">
+		
+		<!-- identyczny jak pierwszy obrazek -->
+		<img src="https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_960_720.png" id="lastClone">
       </div>
     
     </div>
     <script>
-    	const slajdBpowloka = document.querySelector(".slajdB-powloka");
-      const slajdB = document.querySelectorAll(".slajdB img");
-      
-      let i = 1;
-      let czasb = 1000;
-      const rozmiar = slajdB[0].clientWidth;
-      
-      slajdBpowloka.style.transform = "translateX(" + (-rozmiar*i) + "px)";
-      
-      function zmianaSlajduB()
-      {
-      	slajdBpowloka.style.transition = "transform 0.5s ease-in-out";
-        i++;
-        slajdBpowloka.style.transform = "translateX(" + (-rozmiar*i) + "px)";
-        
-      }
-      
-      setTimeout("zmianaSlajduB()", czasB);
+		///// każdy kolejny element slajdów
+		const slajdBpowloka = document.querySelector(".slajdB-powloka");
+		const slajdBwszystkie = document.querySelector(".slajdB");
+		const slajdB = document.querySelectorAll(".slajdB img"); //tabela
+
+		document.body.onload = function()	//do akcji gdy strona się cała załaduje
+		{
+			var i = 0;
+			var czasB = 5000;
+			var przesuniecieX = 0;
+			slajdBpowloka.setAttribute("style", "width:" + slajdB[0].clientWidth + "px");
+			
+			function zmianaSlajduB()
+			{
+				slajdBwszystkie.style.transition = "transform 1s ease-in-out";
+				i++;
+				przesuniecieX += slajdB[i-1].clientWidth;
+				slajdBpowloka.setAttribute("style", "width:" + (slajdB[i].clientWidth) + "px");
+				slajdBwszystkie.style.transform = "translateX(" + (-przesuniecieX) + "px)";
+				slajdBpowloka.style.transition = "width 1s ease-in-out";
+				slajdBpowloka.style.borderRadius = "50px";
+			}
+			
+			
+			var timerB; 
+			timerB = setInterval(zmianaSlajduB, czasB);
+			slajdBwszystkie.addEventListener("transitionend", function(){
+				if(slajdB[i].id === "lastClone")
+				{
+					slajdBwszystkie.style.transition = "";
+					i = 0;
+					przesuniecieX = 0;
+					slajdBwszystkie.style.transform = "translateX(" + (-przesuniecieX) + "px)";
+				}
+			});
+		}
+		
     </script>
   </body>
 </html>
