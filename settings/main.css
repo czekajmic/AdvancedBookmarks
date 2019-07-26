@@ -56,12 +56,22 @@ p.nowa_klasa:hover
   }
 }
 
+.slajdA
+{
+	display: block;
+	max-width: 600px;
+	max-height: 600px;
+	margin: auto;
+	border-radius: 50px;
+}
+
 .slajdB-powloka
 {
   margin: auto;
   overflow: hidden;
   border: 5px solid black;
   width: 0px;
+  border-radius: 50px;
 }
 
 .slajdB
