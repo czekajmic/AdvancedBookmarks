@@ -59,9 +59,9 @@ p.nowa_klasa:hover
 .slajdB-powloka
 {
   margin: auto;
-  width: 50%;
-  /* overflow: hidden;*/
+  overflow: hidden;
   border: 5px solid black;
+  width: 0px;
 }
 
 .slajdB
