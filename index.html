@@ -123,13 +123,19 @@
 			
 			function zmianaSlajduB()
 			{
-				slajdBwszystkie.style.transition = "transform 1s ease-in-out";
-				i++;
-				przesuniecieX += slajdB[i-1].clientWidth;
-				slajdBpowloka.setAttribute("style", "width:" + (slajdB[i].clientWidth) + "px");
-				slajdBwszystkie.style.transform = "translateX(" + (-przesuniecieX) + "px)";
-				slajdBpowloka.style.transition = "width 1s ease-in-out";
-				slajdBpowloka.style.borderRadius = "50px";
+				if(i <= slajdB.length - 1)
+				{
+					slajdBwszystkie.style.transition = "transform 1s ease-in-out";
+					i++;
+					przesuniecieX += slajdB[i-1].clientWidth;
+					slajdBpowloka.setAttribute("style", "width:" + (slajdB[i].clientWidth) + "px");
+					slajdBwszystkie.style.transform = "translateX(" + (-przesuniecieX) + "px)";
+					slajdBpowloka.style.transition = "width 1s ease-in-out";
+					slajdBpowloka.style.borderRadius = "50px";
+				} else
+				{
+					i = 0;
+				}
 			}
 			
 			
